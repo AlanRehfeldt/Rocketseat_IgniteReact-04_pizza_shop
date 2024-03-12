@@ -5,8 +5,8 @@ export interface GetManagedRestaurantResponse {
   name: string
   createdAt: Date | null
   updatedAt: Date | null
-  description: string
-  managerId: string
+  description: string | null
+  managerId: string | null
 }
 
 export async function getManagedRestaurant() {
