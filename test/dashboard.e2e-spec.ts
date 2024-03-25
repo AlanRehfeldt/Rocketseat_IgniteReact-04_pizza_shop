@@ -3,8 +3,6 @@ import { expect, test } from '@playwright/test'
 test('display day orders amount metric', async ({ page }) => {
   await page.goto('/', { waitUntil: 'networkidle' })
 
-  await page.waitForTimeout(1000)
-
   expect(page.getByText('20', { exact: true })).toBeVisible()
   expect(page.getByText('-5%').first()).toBeVisible()
 })
